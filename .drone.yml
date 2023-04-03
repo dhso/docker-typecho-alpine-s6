@@ -9,6 +9,8 @@ steps:
     registry: registry.hub.docker.com
     repo: registry.hub.docker.com/dhso/cors-anywhere
     auto_tag: true
+    context: ./docker
+    dockerfile: ./docker/Dockerfile
     username:
       from_secret: DOCKER_USERNAME
     password:
