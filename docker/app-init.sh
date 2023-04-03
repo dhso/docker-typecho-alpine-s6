@@ -30,11 +30,11 @@ if [ "$APP_DEBUG" != 'false' ]; then
 fi
 
 echo "**** Make sure the /data folders exist ****"
-[ ! -d /data/log/nginx ] && \
-	mkdir -p /data/log/nginx
+[ ! -d /log/nginx ] && \
+	mkdir -p /log/nginx
 
-[ ! -d /data/log/php7 ] && \
-	mkdir -p /data/log/php7
+[ ! -d /log/php7 ] && \
+	mkdir -p /log/php7
 
 [ ! -L /app/usr ] && \
 	cp -ra /app/usr/* /data && \
@@ -57,6 +57,8 @@ fi
 echo "**** Set Permissions ****"
 chown -R "$HTTPD_USER":"$HTTPD_USER" /data
 chmod -R a+rw /data
+chown -R "$HTTPD_USER":"$HTTPD_USER" /log
+chmod -R a+rw /log
 chown -R "$HTTPD_USER":"$HTTPD_USER" /app
 
 echo "**** Setup complete, starting the server. ****"
