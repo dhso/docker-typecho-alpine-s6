@@ -99,6 +99,7 @@ WORKDIR /app
 
 EXPOSE 80
 VOLUME /data
+VOLUME /log
 
 HEALTHCHECK --interval=6s --timeout=3s \
   CMD curl -INfs http://localhost/ > /dev/null || exit 1
