@@ -16,5 +16,5 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     build_args:
-        PUID: "$USER_ID"
-        PGID: "$GROUP_ID"
+        PUID: 1000
+        PGID: 1000
