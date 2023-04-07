@@ -17,7 +17,7 @@ typecho is a PHP based lightweight blog system
 
 ### container volume map
 
-you need to map container path `/data` and `/logs` to your host machine for persistent data storage.
+you need to map container path `/data` and `/log` to your host machine for persistent data storage.
 
 ## example
 
@@ -27,7 +27,8 @@ docker run -d \
 --name=typecho-blog \
 --restart always \
 --mount type=tmpfs,destination=/tmp \
--v /srv/http/typecho:/data \
+-v typecho_data:/data \
+-v typecho_log:/log \
 -e PHP_TZ=Asia/Shanghai \
 -e PHP_MAX_EXECUTION_TIME=600 \
 -p 90:80 \
