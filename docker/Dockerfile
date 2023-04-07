@@ -14,9 +14,13 @@ LABEL maintainer='HuangYeWuDeng <***@ttys0.in>' \
         org.label-schema.license="MIT"
 
 # Environment variables
-ENV PUID='1000' \
-        PGID='1000' \
-        HTTPD_USER='www' \
+ARG PGID=1000
+ARG PUID=1000
+ARG HTTPD_USER='www'
+
+ENV PUID=${PUID} \
+        PGID=${PGID} \
+        HTTPD_USER=${HTTPD_USER} \
         PHP_TZ=Asia/Shanghai \
         PHP_MAX_EXECUTION_TIME=600 \
         PHP_FPM_MAX_CHILDREN=128 \
