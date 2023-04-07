@@ -15,3 +15,6 @@ steps:
       from_secret: DOCKER_USERNAME
     password:
       from_secret: DOCKER_PASSWORD
+    build_args:
+        PUID: "$USER_ID"
+        PGID: "$GROUP_ID"
