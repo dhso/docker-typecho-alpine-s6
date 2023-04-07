@@ -7,7 +7,7 @@ steps:
   image: plugins/docker
   settings:
     registry: registry.hub.docker.com
-    repo: registry.hub.docker.com/dhso/cors-anywhere
+    repo: registry.hub.docker.com/dhso/typecho
     auto_tag: true
     context: ./docker
     dockerfile: ./docker/Dockerfile
