@@ -3,7 +3,7 @@
 #thanks https://github.com/petronetto/php-nginx-alpine
 #man https://www.cyberciti.biz/faq/10-alpine-linux-apk-command-examples/
 
-FROM 80x86/base-alpine:latest
+FROM 80x86/base-alpine:3.9
 
 LABEL maintainer='HuangYeWuDeng <***@ttys0.in>' \
         org.label-schema.name="docker-typecho-alpine-s6" \
